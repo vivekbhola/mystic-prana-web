@@ -1,6 +1,8 @@
 import React from 'react';
-import { Heart, Sparkles, Users, Award, Compass, Leaf } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Heart, Sparkles, Users, Award, Compass, Leaf, ArrowRight } from 'lucide-react';
 import { Card, CardContent } from '../components/ui/card';
+import { Button } from '../components/ui/button';
 
 const About = () => {
   const values = [
