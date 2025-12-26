@@ -89,9 +89,7 @@ const Contact = () => {
       icon: <Mail className="w-6 h-6 text-green-600" />,
       title: "Email Us",
       details: [
-        "info@mysticprana.com",
-        "bookings@mysticprana.com",
-        "support@mysticprana.com"
+        "healingatmysticprana@gmail.com"
       ]
     },
     {
