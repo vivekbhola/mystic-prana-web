@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Sparkles, Heart, Users, Star, ArrowRight, Phone, Mail } from 'lucide-react';
+import { Sparkles, Heart, Users, Star, ArrowRight, Phone, Mail, Compass, Leaf } from 'lucide-react';
 import { Button } from '../components/ui/button';
 import { Card, CardContent } from '../components/ui/card';
 import axios from 'axios';
