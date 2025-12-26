@@ -156,63 +156,111 @@ const About = () => {
         </div>
       </section>
 
-      {/* Team Section */}
-      <section className="section-padding bg-gradient-to-b from-green-50 to-green-100" data-testid="team-section">
+      {/* Mentor Section */}
+      <section className="section-padding bg-gradient-to-b from-green-50 to-green-100" data-testid="mentor-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="font-heading font-bold text-4xl md:text-5xl text-green-800 mb-6">
-              Meet Our Healers
+              Meet Our Mentor
             </h2>
             <p className="text-xl text-green-600 max-w-3xl mx-auto leading-relaxed">
-              Our experienced practitioners are dedicated to supporting your healing journey with 
-              compassion, wisdom, and expertise.
+              Guided by wisdom, compassion, and over 7 years of transformative healing experience, 
+              our mentor creates a sacred space for your spiritual journey.
             </p>
           </div>
 
-          <div className="grid lg:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <Card 
-                key={index} 
-                className="card group hover:scale-102 transition-all duration-300 bg-white"
-                data-testid={`team-member-${index}`}
-              >
-                <CardContent className="p-8 text-center">
-                  <div className="mb-6">
-                    <div className="w-24 h-24 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto flex items-center justify-center mb-4 group-hover:scale-105 transition-transform duration-300">
-                      <span className="text-white font-bold text-2xl font-heading">
-                        {member.name.split(' ').map(n => n[0]).join('')}
-                      </span>
-                    </div>
-                    
-                    <h3 className="font-heading font-semibold text-2xl text-green-800 mb-2">
-                      {member.name}
-                    </h3>
-                    
-                    <p className="text-green-600 font-medium mb-4">
-                      {member.role}
-                    </p>
-                  </div>
-                  
-                  <p className="text-green-600 mb-6 leading-relaxed">
-                    {member.description}
-                  </p>
-                  
-                  <div>
-                    <h4 className="font-semibold text-green-800 mb-3">Specialties:</h4>
-                    <div className="flex flex-wrap gap-2 justify-center">
-                      {member.specialties.map((specialty, specialtyIndex) => (
-                        <span 
-                          key={specialtyIndex}
-                          className="px-3 py-1 bg-green-100 text-green-700 rounded-full text-sm font-medium"
-                        >
-                          {specialty}
+          <div className="max-w-4xl mx-auto">
+            <Card className="card group hover:scale-102 transition-all duration-300 bg-white overflow-hidden">
+              <CardContent className="p-0">
+                <div className="grid lg:grid-cols-2 gap-0">
+                  {/* Photo Section */}
+                  <div className="relative bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center p-12">
+                    <div className="text-center">
+                      <div className="w-32 h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto flex items-center justify-center mb-6 shadow-2xl group-hover:scale-105 transition-transform duration-300">
+                        <span className="text-white font-bold text-4xl font-heading">
+                          MR
                         </span>
-                      ))}
+                      </div>
+                      <div className="space-y-2">
+                        <div className="flex items-center justify-center space-x-2">
+                          <div className="w-3 h-3 bg-red-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-orange-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-yellow-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-green-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-blue-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-indigo-400 rounded-full"></div>
+                          <div className="w-3 h-3 bg-purple-400 rounded-full"></div>
+                        </div>
+                        <p className="text-green-600 text-sm font-medium">Chakra Alignment Specialist</p>
+                      </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-            ))}
+                  
+                  {/* Content Section */}
+                  <div className="p-8 lg:p-12">
+                    <div className="h-full flex flex-col">
+                      <div className="mb-6">
+                        <h3 className="font-heading font-bold text-3xl text-green-800 mb-2">
+                          Mahima Rathore
+                        </h3>
+                        <p className="text-green-600 font-semibold text-lg mb-1">
+                          Founder & Principal Spiritual Energy Healer
+                        </p>
+                        <p className="text-green-500 text-sm">
+                          Certified Energy Healer & Trainer • 7+ Years Experience
+                        </p>
+                      </div>
+                      
+                      <div className="flex-1">
+                        <p className="text-green-600 mb-6 leading-relaxed">
+                          Known for her deeply intuitive approach, Mahima provides transformative healing 
+                          experiences that blend energy healing, aura scanning, meditation, and holistic wellness. 
+                          Her heart-centered guidance helps individuals restore balance, clarity, and inner light.
+                        </p>
+                        
+                        <p className="text-green-600 mb-6 leading-relaxed">
+                          With over 7 years of guiding souls, Mahima is attuned and compassionate, helping 
+                          individuals awaken their true potential and live with harmony and purpose. She ensures 
+                          every person can heal at their own pace with love, integrity, and presence.
+                        </p>
+                        
+                        <div className="mb-6">
+                          <h4 className="font-semibold text-green-800 mb-3">Core Specialties:</h4>
+                          <div className="grid grid-cols-2 gap-2">
+                            <span className="px-3 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium text-center">
+                              Energy Healing
+                            </span>
+                            <span className="px-3 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium text-center">
+                              Aura Scanning
+                            </span>
+                            <span className="px-3 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium text-center">
+                              Chakra Analysis
+                            </span>
+                            <span className="px-3 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium text-center">
+                              Meditation Guide
+                            </span>
+                            <span className="px-3 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium text-center">
+                              Inner Transformation
+                            </span>
+                            <span className="px-3 py-2 bg-green-100 text-green-700 rounded-lg text-sm font-medium text-center">
+                              Spiritual Wellness
+                            </span>
+                          </div>
+                        </div>
+                        
+                        <div className="border-t border-green-200 pt-4">
+                          <p className="text-green-700 italic text-sm leading-relaxed">
+                            "Every soul has the capacity for profound healing and transformation. 
+                            My role is simply to hold sacred space and guide you back to your own inner wisdom."
+                          </p>
+                          <p className="text-green-600 text-xs mt-2">— Mahima Rathore</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
