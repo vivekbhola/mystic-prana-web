@@ -303,7 +303,7 @@ const Home = () => {
               </Button>
             </Link>
             
-            <a href="mailto:info@mysticprana.com">
+            <a href="mailto:healingatmysticprana@gmail.com">
               <Button 
                 variant="outline" 
                 size="lg" 
