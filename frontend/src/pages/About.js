@@ -254,34 +254,100 @@ const About = () => {
         </div>
       </section>
 
-      {/* Call to Action */}
+      {/* Experience the Difference */}
       <section className="section-padding bg-gradient-to-r from-green-800 to-green-700" data-testid="about-cta-section">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <div className="mb-8">
-            <Award className="w-16 h-16 text-green-200 mx-auto mb-6" />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <div className="mb-8">
+              <Award className="w-16 h-16 text-green-200 mx-auto mb-6" />
+            </div>
+            
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-white mb-6">
+              Experience the Difference
+            </h2>
+            
+            <p className="text-xl text-green-100 mb-12 max-w-4xl mx-auto leading-relaxed">
+              Mystic Prana is more than a healing center—it is a sanctuary. What sets us apart is our 
+              commitment to creating experiences that are transformative and deeply personal.
+            </p>
           </div>
-          
-          <h2 className="font-heading font-bold text-4xl md:text-5xl text-white mb-6">
-            Experience the Difference
-          </h2>
-          
-          <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto leading-relaxed">
-            Join hundreds of clients who have discovered profound healing and transformation 
-            through our compassionate, personalized approach to wellness.
-          </p>
-          
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">500+</div>
-              <div className="text-green-200">Clients Served</div>
+
+          {/* Key Differentiators */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+            <div className="text-center">
+              <div className="w-20 h-20 bg-green-100 bg-opacity-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Heart className="w-10 h-10 text-green-200" />
+              </div>
+              <h3 className="font-heading font-semibold text-2xl text-white mb-4">
+                Personalized
+              </h3>
+              <p className="text-green-100 leading-relaxed">
+                Every session is tailored to your emotional and energetic needs.
+              </p>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">15+</div>
-              <div className="text-green-200">Years Experience</div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-green-100 bg-opacity-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Sparkles className="w-10 h-10 text-green-200" />
+              </div>
+              <h3 className="font-heading font-semibold text-2xl text-white mb-4">
+                Integrative
+              </h3>
+              <p className="text-green-100 leading-relaxed">
+                We blend ancient healing wisdom with practical tools for daily life.
+              </p>
             </div>
-            <div>
-              <div className="text-4xl font-bold text-white mb-2">98%</div>
-              <div className="text-green-200">Client Satisfaction</div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-green-100 bg-opacity-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Users className="w-10 h-10 text-green-200" />
+              </div>
+              <h3 className="font-heading font-semibold text-2xl text-white mb-4">
+                Safe & Supportive
+              </h3>
+              <p className="text-green-100 leading-relaxed">
+                A judgment-free space where your journey is honored.
+              </p>
+            </div>
+
+            <div className="text-center">
+              <div className="w-20 h-20 bg-green-100 bg-opacity-20 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <Compass className="w-10 h-10 text-green-200" />
+              </div>
+              <h3 className="font-heading font-semibold text-2xl text-white mb-4">
+                Transformative
+              </h3>
+              <p className="text-green-100 leading-relaxed">
+                Designed not just for relief, but for lasting inner change.
+              </p>
+            </div>
+          </div>
+
+          {/* Inspirational Quote */}
+          <div className="text-center bg-white bg-opacity-10 backdrop-blur-sm rounded-3xl p-8 md:p-12">
+            <div className="max-w-4xl mx-auto">
+              <blockquote className="text-2xl md:text-3xl font-heading font-light text-white leading-relaxed mb-6">
+                "Here at Mystic Prana, every breath restores balance, every moment uplifts the soul, 
+                and every heartbeat ignites your inner light."
+              </blockquote>
+              
+              <div className="w-20 h-1 bg-green-300 mx-auto mb-6"></div>
+              
+              <p className="text-lg text-green-100 mb-8">
+                Whether you seek peace, clarity, emotional release, or a deeper connection with yourself, 
+                begin your transformation from the very first moment.
+              </p>
+              
+              <Link to="/contact">
+                <Button 
+                  size="lg" 
+                  className="bg-white text-green-800 hover:bg-green-50 px-8 py-4 text-lg font-semibold rounded-full shadow-xl hover:shadow-2xl hover:scale-105 transition-all duration-300"
+                  data-testid="begin-transformation-btn"
+                >
+                  Begin Your Transformation
+                  <ArrowRight className="ml-2 w-5 h-5" />
+                </Button>
+              </Link>
             </div>
           </div>
         </div>
