@@ -48,18 +48,33 @@ const Home = () => {
   const features = [
     {
       icon: <Sparkles className="w-8 h-8 text-green-600" />,
-      title: "Energy Healing",
-      description: "Restore balance and harmony through ancient healing practices"
+      title: "Energy Alignment",
+      description: "Maintaining high vibrational practices that uplift, cleanse and elevate every seeker."
     },
     {
       icon: <Heart className="w-8 h-8 text-green-600" />,
-      title: "Holistic Wellness",
-      description: "Nurture your mind, body, and spirit with personalized care"
+      title: "Guided Meditation",
+      description: "Rediscovering your natural state of balance and wellbeing through mindful practices."
     },
     {
       icon: <Users className="w-8 h-8 text-green-600" />,
-      title: "Community Healing",
-      description: "Connect with others on their journey to spiritual growth"
+      title: "Chakra Work",
+      description: "Harmonizing and balancing your energy centers for optimal spiritual alignment."
+    },
+    {
+      icon: <Compass className="w-8 h-8 text-green-600" />,
+      title: "Spiritual Cleansing",
+      description: "Purifying and clearing energetic blockages to restore clarity and inner peace."
+    },
+    {
+      icon: <Star className="w-8 h-8 text-green-600" />,
+      title: "Aura Scanning",
+      description: "Intuitive assessment of your energy field to identify areas needing healing attention."
+    },
+    {
+      icon: <Leaf className="w-8 h-8 text-green-600" />,
+      title: "Breathwork & Energy Therapy",
+      description: "Holistic healing techniques combining conscious breathing with energy-based therapies."
     }
   ];
 
