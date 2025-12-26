@@ -19,7 +19,7 @@ load_dotenv(ROOT_DIR / '.env')
 # Email configuration
 RESEND_API_KEY = os.environ.get('RESEND_API_KEY')
 SENDER_EMAIL = os.environ.get('SENDER_EMAIL', 'onboarding@resend.dev')
-RECIPIENT_EMAIL = "healingatmysticprana@gmail.com"
+RECIPIENT_EMAIL = os.environ.get('RECIPIENT_EMAIL', 'healingatmysticprana@gmail.com')
 
 # Initialize Resend
 if RESEND_API_KEY:
