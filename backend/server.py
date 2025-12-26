@@ -113,7 +113,6 @@ async def get_services():
                     "name": "Energy Healing Sessions",
                     "description": "Personalized energy healing sessions to restore balance and promote natural healing.",
                     "duration": "60-90 minutes",
-                    "price_range": "$80-120",
                     "benefits": ["Stress relief", "Energy balance", "Emotional healing", "Physical wellness"],
                     "is_active": True
                 },
@@ -122,7 +121,6 @@ async def get_services():
                     "name": "Group Meditation",
                     "description": "Join our weekly group meditation sessions for community healing and shared spiritual growth.",
                     "duration": "45 minutes",
-                    "price_range": "$25-35",
                     "benefits": ["Community connection", "Guided practice", "Spiritual growth", "Inner peace"],
                     "is_active": True
                 },
@@ -131,7 +129,6 @@ async def get_services():
                     "name": "Chakra Balancing",
                     "description": "Specialized chakra alignment and balancing therapy to harmonize your energy centers.",
                     "duration": "75 minutes",
-                    "price_range": "$90-130",
                     "benefits": ["Energy alignment", "Chakra balance", "Spiritual clarity", "Physical vitality"],
                     "is_active": True
                 },
@@ -140,7 +137,6 @@ async def get_services():
                     "name": "Wellness Consultation",
                     "description": "Comprehensive wellness assessment and personalized healing plan development.",
                     "duration": "90 minutes",
-                    "price_range": "$100-150",
                     "benefits": ["Personalized plan", "Holistic assessment", "Goal setting", "Ongoing support"],
                     "is_active": True
                 }
