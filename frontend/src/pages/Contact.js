@@ -81,9 +81,8 @@ const Contact = () => {
       icon: <Phone className="w-6 h-6 text-green-600" />,
       title: "Call Us",
       details: [
-        "(555) 123-HEAL",
-        "(555) 123-4325",
-        "Emergency: (555) 123-9999"
+        "+91-7353715159",
+        "+91-9982932666"
       ]
     },
     {
