@@ -5,24 +5,34 @@ import { Card, CardContent } from '../components/ui/card';
 const About = () => {
   const values = [
     {
-      icon: <Heart className="w-8 h-8 text-green-600" />,
-      title: "Compassionate Care",
-      description: "Every session is guided by deep empathy and understanding for your unique healing journey."
-    },
-    {
       icon: <Sparkles className="w-8 h-8 text-green-600" />,
-      title: "Ancient Wisdom",
-      description: "We honor time-tested healing traditions while embracing modern wellness approaches."
+      title: "Energy Alignment",
+      description: "Maintaining high vibrational practices that uplift, cleanse, and elevate every seeker."
     },
     {
-      icon: <Users className="w-8 h-8 text-green-600" />,
-      title: "Community Connection",
-      description: "Healing happens best in community. We foster connections that support your growth."
+      icon: <Heart className="w-8 h-8 text-green-600" />,
+      title: "Gratitude as a Way of Being",
+      description: "Celebrating the little moments, the big breakthroughs, and everything in between."
     },
     {
       icon: <Compass className="w-8 h-8 text-green-600" />,
-      title: "Spiritual Guidance",
-      description: "Navigate your spiritual path with wisdom, patience, and personalized support."
+      title: "Spiritual Discipline",
+      description: "Honoring practices with consistency, devotion, and integrity."
+    },
+    {
+      icon: <Users className="w-8 h-8 text-green-600" />,
+      title: "Collective Healing",
+      description: "Creating a safe and compassionate space where every soul feels held and supported."
+    },
+    {
+      icon: <Leaf className="w-8 h-8 text-green-600" />,
+      title: "Seva (Selfless Service)",
+      description: "Serving without expectation and becoming a channel of purity, love, and the guru's teachings."
+    },
+    {
+      icon: <Award className="w-8 h-8 text-green-600" />,
+      title: "Growth of the Soul",
+      description: "Every circle, meditation, and gathering is dedicated to evolving into the highest version of ourselves."
     }
   ];
 
