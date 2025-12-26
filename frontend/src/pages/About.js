@@ -26,27 +26,6 @@ const About = () => {
     }
   ];
 
-  const team = [
-    {
-      name: "Elena Sharma",
-      role: "Founder & Master Healer",
-      description: "With over 15 years of experience in energy healing and meditation, Elena founded Mystic Prana to create a sanctuary for spiritual wellness.",
-      specialties: ["Reiki Master", "Chakra Balancing", "Meditation Guide"]
-    },
-    {
-      name: "David Chen",
-      role: "Wellness Practitioner",
-      description: "David brings a unique blend of Eastern and Western healing approaches, specializing in holistic wellness and energy therapy.",
-      specialties: ["Energy Therapy", "Wellness Consultation", "Holistic Health"]
-    },
-    {
-      name: "Sarah Martinez",
-      role: "Group Facilitator",
-      description: "Sarah creates sacred spaces for community healing, leading our group meditation and wellness workshops with gentle wisdom.",
-      specialties: ["Group Meditation", "Workshop Leadership", "Community Building"]
-    }
-  ];
-
   return (
     <div className="min-h-screen pt-20">
       {/* Hero Section */}
