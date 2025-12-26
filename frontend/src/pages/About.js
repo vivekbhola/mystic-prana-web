@@ -50,15 +50,14 @@ const About = () => {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h1 className="font-heading font-bold text-5xl md:text-6xl text-white mb-6 fade-in">
-            Our Story of 
+            About 
             <span className="bg-gradient-to-r from-green-200 to-green-100 bg-clip-text text-transparent">
-              Healing
+              Mystic Prana
             </span>
           </h1>
           
           <p className="text-xl md:text-2xl text-green-100 max-w-3xl mx-auto leading-relaxed slide-up">
-            Founded on the belief that everyone deserves access to healing and spiritual wellness, 
-            Mystic Prana is more than a center—it's a community of souls on a journey to wholeness.
+            A sacred space dedicated to inner transformation, emotional balance, and energetic harmony.
           </p>
         </div>
       </section>
