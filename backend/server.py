@@ -136,7 +136,7 @@ async def create_contact_inquiry(inquiry: ContactInquiryCreate):
                             {f'<div class="field"><strong>Service Interest:</strong> {contact_obj.service_interest}</div>' if contact_obj.service_interest else ''}
                             <div class="field">
                                 <strong>Message:</strong><br>
-                                {contact_obj.message.replace('\\n', '<br>')}
+                                {contact_obj.message.replace(chr(10), '<br>')}
                             </div>
                             <div class="field">
                                 <strong>Submitted:</strong> {contact_obj.timestamp.strftime('%B %d, %Y at %I:%M %p UTC')}
