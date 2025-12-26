@@ -146,8 +146,8 @@ const Home = () => {
               Healing Modalities
             </h2>
             <p className="text-xl text-green-600 max-w-3xl mx-auto leading-relaxed">
-              Experience holistic wellness through our carefully curated healing practices, 
-              designed to nurture your complete well-being.
+              Mystic Prana brings together a diverse range of healing modalities, 
+              blending ancient wisdom with modern practices to support your complete transformation.
             </p>
           </div>
 
