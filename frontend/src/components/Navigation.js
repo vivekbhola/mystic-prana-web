@@ -23,7 +23,9 @@ const Navigation = () => {
   const navItems = [
     { path: '/', label: 'Home' },
     { path: '/about', label: 'About Us' },
-    { path: '/contact', label: 'Contact' }
+    { path: '/wellness-accessories', label: 'Wellness Accessories' },
+    { path: '/gallery', label: 'Gallery' },
+    { path: '/contact', label: 'Contact Us' }
   ];
 
   return (
