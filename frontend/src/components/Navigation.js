@@ -40,11 +40,15 @@ const Navigation = () => {
           {/* Logo */}
           <Link 
             to="/" 
-            className="flex items-center space-x-2 group"
+            className="flex items-center space-x-3 group"
             data-testid="logo-link"
           >
-            <div className="w-10 h-10 bg-gradient-to-br from-green-600 to-green-700 rounded-full flex items-center justify-center group-hover:scale-105 transition-transform duration-300">
-              <span className="text-white font-bold text-lg font-heading">MP</span>
+            <div className="relative">
+              <img 
+                src="https://customer-assets.emergentagent.com/job_prana-wellness/artifacts/l5mux881_logo.jpeg"
+                alt="Mystic Prana Logo"
+                className="h-12 w-12 object-contain rounded-lg group-hover:scale-105 transition-transform duration-300 shadow-md"
+              />
             </div>
             <div className="flex flex-col">
               <span className={`font-heading font-semibold text-xl transition-colors duration-300 ${
