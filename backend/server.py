@@ -96,8 +96,83 @@ async def create_contact_inquiry(inquiry: ContactInquiryCreate):
         # Prepare for MongoDB storage
         mongo_data = prepare_for_mongo(contact_obj.dict())
         
+        # Store in database
         await db.contact_inquiries.insert_one(mongo_data)
+        
+        # Send email notification
+        if RESEND_API_KEY:
+            try:
+                # Create HTML email content
+                html_content = f"""
+                <html>
+                <head>
+                    <style>
+                        body {{ font-family: Arial, sans-serif; line-height: 1.6; color: #2d5739; }}
+                        .container {{ max-width: 600px; margin: 0 auto; padding: 20px; }}
+                        .header {{ background: linear-gradient(135deg, #2d5739 0%, #4a7c59 100%); color: white; padding: 20px; text-align: center; }}
+                        .content {{ background: #f7f3e9; padding: 20px; }}
+                        .field {{ margin-bottom: 15px; }}
+                        .field strong {{ color: #2d5739; }}
+                        .footer {{ background: #2d5739; color: white; padding: 15px; text-align: center; }}
+                    </style>
+                </head>
+                <body>
+                    <div class="container">
+                        <div class="header">
+                            <h1>New Contact Inquiry - Mystic Prana</h1>
+                        </div>
+                        <div class="content">
+                            <h2>Contact Details:</h2>
+                            <div class="field">
+                                <strong>Name:</strong> {contact_obj.name}
+                            </div>
+                            <div class="field">
+                                <strong>Email:</strong> {contact_obj.email}
+                            </div>
+                            {f'<div class="field"><strong>Phone:</strong> {contact_obj.phone}</div>' if contact_obj.phone else ''}
+                            <div class="field">
+                                <strong>Subject:</strong> {contact_obj.subject}
+                            </div>
+                            {f'<div class="field"><strong>Service Interest:</strong> {contact_obj.service_interest}</div>' if contact_obj.service_interest else ''}
+                            <div class="field">
+                                <strong>Message:</strong><br>
+                                {contact_obj.message.replace('\\n', '<br>')}
+                            </div>
+                            <div class="field">
+                                <strong>Submitted:</strong> {contact_obj.timestamp.strftime('%B %d, %Y at %I:%M %p UTC')}
+                            </div>
+                            <div class="field">
+                                <strong>Inquiry ID:</strong> {contact_obj.id}
+                            </div>
+                        </div>
+                        <div class="footer">
+                            <p>This inquiry has been automatically stored in your database.</p>
+                            <p>Please respond to {contact_obj.email} directly.</p>
+                        </div>
+                    </div>
+                </body>
+                </html>
+                """
+                
+                # Email parameters
+                email_params = {{
+                    "from": SENDER_EMAIL,
+                    "to": [RECIPIENT_EMAIL],
+                    "subject": f"New Contact Inquiry from {contact_obj.name} - {contact_obj.subject}",
+                    "html": html_content
+                }}
+                
+                # Send email asynchronously
+                email_result = await asyncio.to_thread(resend.Emails.send, email_params)
+                logger.info(f"Email sent successfully to {RECIPIENT_EMAIL}, ID: {email_result.get('id', 'Unknown')}")
+                
+            except Exception as email_error:
+                # Log email error but don't fail the API call
+                logger.error(f"Failed to send email notification: {str(email_error)}")
+                # Continue processing - database save was successful
+        
         return contact_obj
+        
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to submit inquiry: {str(e)}")
 
