@@ -100,7 +100,7 @@ async def create_contact_inquiry(inquiry: ContactInquiryCreate):
         await db.contact_inquiries.insert_one(mongo_data)
         
         # Send email notification
-        if RESEND_API_KEY:
+        if RESEND_API_KEY and RESEND_API_KEY != "re_placeholder_key_here":
             try:
                 # Create HTML email content
                 html_content = f"""
@@ -167,9 +167,19 @@ async def create_contact_inquiry(inquiry: ContactInquiryCreate):
                 logger.info(f"Email sent successfully to {RECIPIENT_EMAIL}, ID: {email_result.get('id', 'Unknown')}")
                 
             except Exception as email_error:
-                # Log email error but don't fail the API call
                 logger.error(f"Failed to send email notification: {str(email_error)}")
-                # Continue processing - database save was successful
+        else:
+            # Demo mode - simulate email sending
+            logger.info("=== EMAIL DEMO MODE ===")
+            logger.info(f"📧 SIMULATED EMAIL to: {RECIPIENT_EMAIL}")
+            logger.info(f"📧 Subject: New Contact Inquiry from {contact_obj.name} - {contact_obj.subject}")
+            logger.info(f"📧 From: {contact_obj.name} ({contact_obj.email})")
+            logger.info(f"📧 Phone: {contact_obj.phone or 'Not provided'}")
+            logger.info(f"📧 Service Interest: {contact_obj.service_interest or 'General inquiry'}")
+            logger.info(f"📧 Message: {contact_obj.message[:100]}{'...' if len(contact_obj.message) > 100 else ''}")
+            logger.info(f"📧 Inquiry ID: {contact_obj.id}")
+            logger.info("📧 To enable real emails, add RESEND_API_KEY to .env file")
+            logger.info("=======================")
         
         return contact_obj
         
