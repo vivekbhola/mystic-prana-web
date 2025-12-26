@@ -62,8 +62,8 @@ const About = () => {
         </div>
       </section>
 
-      {/* Mission Section */}
-      <section className="section-padding bg-gradient-to-b from-green-50 to-white" data-testid="mission-section">
+      {/* About Mystic Prana Section */}
+      <section className="section-padding bg-gradient-to-b from-green-50 to-white" data-testid="about-mystic-prana-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="scale-in">
@@ -71,25 +71,31 @@ const About = () => {
                 src="https://images.pexels.com/photos/917732/pexels-photo-917732.jpeg" 
                 alt="Group meditation session" 
                 className="rounded-3xl shadow-2xl w-full h-96 object-cover image-overlay"
-                data-testid="mission-image"
+                data-testid="about-image"
               />
             </div>
             
             <div className="fade-in">
               <h2 className="font-heading font-bold text-4xl md:text-5xl text-green-800 mb-6">
-                Our Mission
+                Our Sacred Space
               </h2>
               
               <p className="text-lg text-green-600 mb-6 leading-relaxed">
-                At Mystic Prana, we believe that healing is not just about addressing symptoms—it's about 
-                awakening the inherent wisdom and power within each individual. Our mission is to provide 
-                a sacred space where ancient healing traditions meet modern wellness practices.
+                Mystic Prana is a sacred space dedicated to inner transformation, emotional balance, and energetic harmony. 
+                Rooted in ancient wisdom and enriched with modern healing modalities, we bring together practices that 
+                nurture the mind, soothe the heart, and realign the energy system.
               </p>
               
+              <p className="text-lg text-green-600 mb-6 leading-relaxed">
+                Our community was created for those seeking more than just relief — for those who wish to understand themselves 
+                deeply, heal consciously, and grow with intention. Through meditation, breathwork, holistic healing techniques, 
+                and energy-based therapies, we support individuals in rediscovering their natural state of balance and wellbeing.
+              </p>
+
               <p className="text-lg text-green-600 mb-8 leading-relaxed">
-                We are dedicated to supporting your journey of self-discovery, spiritual growth, and 
-                holistic healing through personalized care, community connection, and time-honored 
-                healing modalities.
+                At Mystic Prana, we believe healing is multidimensional. It is emotional, mental, physical, and energetic — 
+                and each layer deserves care, attention, and compassion. We honour every seeker's journey, creating a space 
+                where presence becomes healing, energy becomes guidance, and transformation becomes a lived experience.
               </p>
               
               <div className="flex items-center space-x-4">
@@ -97,8 +103,8 @@ const About = () => {
                   <Leaf className="w-6 h-6 text-green-600" />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-green-800 text-lg">Rooted in Nature</h3>
-                  <p className="text-green-600">Embracing the healing power of natural wisdom</p>
+                  <h3 className="font-semibold text-green-800 text-lg">A Place of Homecoming</h3>
+                  <p className="text-green-600">Where transformation becomes a lived experience</p>
                 </div>
               </div>
             </div>
