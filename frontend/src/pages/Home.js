@@ -187,13 +187,10 @@ const Home = () => {
                   data-testid={`service-${index}`}
                 >
                   <CardContent className="p-8">
-                    <div className="flex justify-between items-start mb-4">
+                    <div className="mb-4">
                       <h3 className="font-heading font-semibold text-2xl text-green-800 group-hover:text-green-700 transition-colors">
                         {service.name}
                       </h3>
-                      <span className="text-green-600 font-semibold text-lg">
-                        {service.price_range}
-                      </span>
                     </div>
                     
                     <p className="text-green-600 mb-4 leading-relaxed">
