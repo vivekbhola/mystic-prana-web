@@ -51,7 +51,6 @@ class Service(BaseModel):
     name: str
     description: str
     duration: str
-    price_range: str
     benefits: List[str]
     is_active: bool = True
 
