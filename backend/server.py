@@ -155,12 +155,12 @@ async def create_contact_inquiry(inquiry: ContactInquiryCreate):
                 """
                 
                 # Email parameters
-                email_params = {{
+                email_params = {
                     "from": SENDER_EMAIL,
                     "to": [RECIPIENT_EMAIL],
                     "subject": f"New Contact Inquiry from {contact_obj.name} - {contact_obj.subject}",
                     "html": html_content
-                }}
+                }
                 
                 # Send email asynchronously
                 email_result = await asyncio.to_thread(resend.Emails.send, email_params)
