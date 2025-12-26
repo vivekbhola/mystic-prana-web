@@ -152,6 +152,91 @@ const About = () => {
         </div>
       </section>
 
+      {/* Our Vision Section */}
+      <section className="section-padding bg-white" data-testid="vision-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-green-800 mb-6">
+              Our Vision
+            </h2>
+            <p className="text-xl text-green-600 max-w-3xl mx-auto leading-relaxed">
+              A welcoming sanctuary for every seeker where healing becomes approachable and transformative.
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <Card className="card border-0 shadow-2xl bg-gradient-to-br from-green-50 to-white">
+              <CardContent className="p-12">
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 bg-green-100 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <Compass className="w-10 h-10 text-green-600" />
+                  </div>
+                </div>
+                
+                <p className="text-lg text-green-700 leading-relaxed mb-6 text-center">
+                  We envision Mystic Prana as a welcoming sanctuary for every seeker — a place where the mind finds clarity, 
+                  the heart feels safe, and the energy system is gently restored. A space where healing isn't intimidating 
+                  or complicated, but approachable, heartfelt, and transformative in everyday life.
+                </p>
+                
+                <p className="text-lg text-green-700 leading-relaxed mb-6 text-center">
+                  Here, every practice — from meditation and breathwork to energy alignment and holistic healing — is designed 
+                  to help you reconnect with your true self, release what no longer serves you, and rediscover balance, 
+                  peace, and inner strength.
+                </p>
+                
+                <p className="text-lg text-green-700 leading-relaxed text-center">
+                  We imagine a community where seekers of all paths feel drawn to explore, grow, and evolve — supported by 
+                  guidance, warmth, and shared intention. At Mystic Prana, we aim to make the path of self-discovery and 
+                  healing relatable, inspiring, and deeply personal — so that every individual leaves feeling more aligned, 
+                  present, and connected to the light within.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
+      {/* Our Mission Section */}
+      <section className="section-padding bg-gradient-to-b from-green-50 to-white" data-testid="mission-section">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="font-heading font-bold text-4xl md:text-5xl text-green-800 mb-6">
+              Our Mission
+            </h2>
+            <p className="text-xl text-green-600 max-w-3xl mx-auto leading-relaxed">
+              Creating a sacred, transformative space grounded in compassion and conscious presence.
+            </p>
+          </div>
+
+          <div className="max-w-5xl mx-auto">
+            <Card className="card border-0 shadow-2xl bg-white">
+              <CardContent className="p-12">
+                <div className="text-center mb-8">
+                  <div className="w-20 h-20 bg-green-100 rounded-full mx-auto mb-6 flex items-center justify-center">
+                    <Heart className="w-10 h-10 text-green-600" />
+                  </div>
+                </div>
+                
+                <p className="text-lg text-green-700 leading-relaxed text-center">
+                  At Mystic Prana, our mission is to create a sacred, transformative space where every seeker feels seen, 
+                  supported, and connected to their inner light. Through meditation, mindful practices, energy alignment, 
+                  and community gatherings, we guide individuals back to stillness — where true healing and clarity reside.
+                </p>
+                
+                <div className="w-16 h-1 bg-green-300 mx-auto my-8"></div>
+                
+                <p className="text-lg text-green-700 leading-relaxed text-center">
+                  Grounded in sewa, compassion, and conscious presence, we aim to nurture a community that grows together 
+                  with sincerity, devotion, and authenticity. Our mission is to help each person awaken their highest potential, 
+                  embody inner harmony, and live with awareness, gratitude, and purpose.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* Mentor Section */}
       <section className="section-padding bg-gradient-to-b from-green-50 to-green-100" data-testid="mentor-section">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
