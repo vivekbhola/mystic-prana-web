@@ -176,7 +176,11 @@ const WellnessAccessories = () => {
                     <img 
                       src={item.image} 
                       alt={item.name} 
-                      className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                      className={`w-full h-64 group-hover:scale-110 transition-transform duration-300 ${
+                        item.name === 'Aura Spray' 
+                          ? 'object-contain bg-white p-4' 
+                          : 'object-cover'
+                      }`}
                     />
                     <div className="absolute top-4 right-4">
                       <button className="w-10 h-10 bg-white/80 backdrop-blur-sm rounded-full flex items-center justify-center hover:bg-white transition-colors duration-300">
