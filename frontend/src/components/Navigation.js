@@ -94,6 +94,24 @@ const Navigation = () => {
               </Link>
             ))}
             
+            {/* Cart Button */}
+            <button
+              onClick={() => setIsCartOpen(true)}
+              className={`relative px-3 py-2 rounded-lg font-medium transition-all duration-300 hover:scale-105 ${
+                isScrolled
+                  ? 'text-gray-700 hover:text-green-600'
+                  : 'text-white hover:text-green-200'
+              }`}
+              data-testid="cart-button"
+            >
+              <ShoppingBag className="w-6 h-6" />
+              {getCartItemsCount() > 0 && (
+                <span className="absolute -top-2 -right-2 bg-green-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                  {getCartItemsCount()}
+                </span>
+              )}
+            </button>
+            
             <Link
               to="/contact"
               className={`px-6 py-2 rounded-full font-medium transition-all duration-300 hover:scale-105 hover:shadow-lg ${
