@@ -13,7 +13,7 @@ const WellnessAccessories = () => {
       name: "Aura Spray",
       category: "aura-clearing",
       price: "₹600",
-      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxzcGlyaXR1YWx8ZW58MHx8fHwxNzU5NjQ4NzIxfDA&ixlib=rb-4.1.0&q=85",
+      image: "https://customer-assets.emergentagent.com/job_prana-wellness/artifacts/z12v1usx_Mystic-Prana%20-%20Aura%20Spray.jpeg",
       description: "An instant mist to clear stagnant, low-vibrational energy from your personal space and aura.",
       rating: 4.9,
       reviews: 142,
