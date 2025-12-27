@@ -230,6 +230,7 @@ const WellnessAccessories = () => {
                             : 'bg-gray-300 text-gray-500 cursor-not-allowed'
                         }`}
                         disabled={!item.inStock}
+                        onClick={() => item.inStock && addToCart(item)}
                         data-testid={`add-to-cart-${item.id}`}
                       >
                         <ShoppingBag className="mr-2 w-4 h-4" />
