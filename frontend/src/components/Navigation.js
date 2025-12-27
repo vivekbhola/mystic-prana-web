@@ -158,6 +158,24 @@ const Navigation = () => {
                 {item.label}
               </Link>
             ))}
+            
+            {/* Mobile Cart Button */}
+            <button
+              onClick={() => setIsCartOpen(true)}
+              className="flex items-center justify-between w-full px-6 py-3 text-sm font-medium text-gray-700 hover:bg-green-50 hover:pl-8 transition-all duration-300"
+              data-testid="mobile-cart-button"
+            >
+              <span className="flex items-center">
+                <ShoppingBag className="w-4 h-4 mr-3" />
+                Cart
+              </span>
+              {getCartItemsCount() > 0 && (
+                <span className="bg-green-600 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
+                  {getCartItemsCount()}
+                </span>
+              )}
+            </button>
+            
             <div className="px-6 py-3">
               <Link
                 to="/contact"
@@ -170,6 +188,9 @@ const Navigation = () => {
           </div>
         </div>
       </div>
+      
+      {/* Cart Sidebar */}
+      <Cart isOpen={isCartOpen} onClose={() => setIsCartOpen(false)} />
     </nav>
   );
 };
