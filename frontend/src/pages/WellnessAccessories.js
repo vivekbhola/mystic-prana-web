@@ -10,6 +10,17 @@ const WellnessAccessories = () => {
   const [accessories] = useState([
     {
       id: 1,
+      name: "Aura Spray",
+      category: "aura-clearing",
+      price: "₹600",
+      image: "https://images.unsplash.com/photo-1518495973542-4542c06a5843?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxzcGlyaXR1YWx8ZW58MHx8fHwxNzU5NjQ4NzIxfDA&ixlib=rb-4.1.0&q=85",
+      description: "An instant mist to clear stagnant, low-vibrational energy from your personal space and aura.",
+      rating: 4.9,
+      reviews: 142,
+      inStock: true
+    },
+    {
+      id: 2,
       name: "Chakra Healing Crystal Set",
       category: "crystals",
       price: "$89.99",
@@ -20,7 +31,7 @@ const WellnessAccessories = () => {
       inStock: true
     },
     {
-      id: 2,
+      id: 3,
       name: "Meditation Cushion & Mat Set",
       category: "meditation",
       price: "$125.00",
@@ -31,7 +42,7 @@ const WellnessAccessories = () => {
       inStock: true
     },
     {
-      id: 3,
+      id: 4,
       name: "Essential Oil Diffuser",
       category: "aromatherapy",
       price: "$65.00",
@@ -42,7 +53,7 @@ const WellnessAccessories = () => {
       inStock: true
     },
     {
-      id: 4,
+      id: 5,
       name: "Singing Bowl Set",
       category: "sound-healing",
       price: "$145.00",
@@ -53,7 +64,7 @@ const WellnessAccessories = () => {
       inStock: false
     },
     {
-      id: 5,
+      id: 6,
       name: "Yoga & Meditation Bundle",
       category: "meditation",
       price: "$199.99",
@@ -64,7 +75,7 @@ const WellnessAccessories = () => {
       inStock: true
     },
     {
-      id: 6,
+      id: 7,
       name: "Sage & Palo Santo Kit",
       category: "cleansing",
       price: "$35.00",
