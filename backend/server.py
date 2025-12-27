@@ -69,6 +69,44 @@ class ContactInquiryCreate(BaseModel):
     message: str = Field(..., min_length=10, max_length=1000)
     service_interest: Optional[str] = None
 
+class CartItem(BaseModel):
+    product_id: str
+    name: str
+    price: str
+    quantity: int
+    image: str
+
+class Cart(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    session_id: str
+    items: List[CartItem]
+    total_amount: float
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+class CreateOrderRequest(BaseModel):
+    amount: int  # Amount in paise (INR)
+    currency: str = "INR"
+    customer_info: Dict[str, str]
+    cart_items: List[CartItem]
+
+class Order(BaseModel):
+    id: str = Field(default_factory=lambda: str(uuid.uuid4()))
+    order_id: str  # Razorpay order ID
+    customer_info: Dict[str, str]
+    items: List[CartItem]
+    total_amount: int  # Amount in paise
+    currency: str = "INR"
+    status: str = "created"
+    payment_id: Optional[str] = None
+    created_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(timezone.utc))
+
+class PaymentVerification(BaseModel):
+    razorpay_order_id: str
+    razorpay_payment_id: str
+    razorpay_signature: str
+
 class Service(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     name: str
