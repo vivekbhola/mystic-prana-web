@@ -8,6 +8,7 @@ import { useCart } from '../context/CartContext';
 
 const WellnessAccessories = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const { addToCart } = useCart();
   const [accessories] = useState([
     {
       id: 1,
