@@ -89,6 +89,7 @@ const WellnessAccessories = () => {
 
   const categories = [
     { value: 'all', label: 'All Products' },
+    { value: 'aura-clearing', label: 'Aura Clearing' },
     { value: 'crystals', label: 'Crystals & Stones' },
     { value: 'meditation', label: 'Meditation' },
     { value: 'aromatherapy', label: 'Aromatherapy' },
