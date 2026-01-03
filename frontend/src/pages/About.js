@@ -257,10 +257,12 @@ const About = () => {
                   {/* Photo Section */}
                   <div className="relative bg-gradient-to-br from-green-100 to-green-200 flex items-center justify-center p-12">
                     <div className="text-center">
-                      <div className="w-32 h-32 bg-gradient-to-br from-green-400 to-green-600 rounded-full mx-auto flex items-center justify-center mb-6 shadow-2xl group-hover:scale-105 transition-transform duration-300">
-                        <span className="text-white font-bold text-4xl font-heading">
-                          MR
-                        </span>
+                      <div className="w-48 h-48 mx-auto mb-6 rounded-full overflow-hidden shadow-2xl group-hover:scale-105 transition-transform duration-300 border-4 border-white">
+                        <img 
+                          src="https://customer-assets.emergentagent.com/job_prana-wellness/artifacts/oahj0y4z_Unknown.jpeg"
+                          alt="Mahima Rathore - Founder & Principal Spiritual Energy Healer"
+                          className="w-full h-full object-cover"
+                        />
                       </div>
                       <div className="space-y-2">
                         <div className="flex items-center justify-center space-x-2">
